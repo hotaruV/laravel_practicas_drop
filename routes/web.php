@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/productos-servicios', [ProductoController::class, 'saludo']);
+
+Route::get('/curso-semestral', [PagesController::class, 'semestral'])->name('semestral');
+Route::get('/curso-anual', [PagesController::class, 'anual'])->name('anual');
+Route::get('/curso-semi-intensivo', [PagesController::class, 'semi'])->name('intensivo');
+
+// Route::get('/productos-servicios', [ProductoController::class, 'saludo']);
 
 
 Route::middleware([
