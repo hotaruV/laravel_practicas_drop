@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Producto;
+use App\Models\Universidades;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call(ProductosSeeder::class);
+        // $this->call(ProductosSeeder::class);
+        $this->call(CursosSeeder::class);
+        $this->call(UniversidadesSeeder::class);
     }
 }

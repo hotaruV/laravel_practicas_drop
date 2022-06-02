@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/', [PagesController::class, 'index'])->name('index');
 
 Route::get('/curso-semestral', [PagesController::class, 'semestral'])->name('semestral');
+Route::post('/curso-semestral', [PagesController::class, 'semestral_data'])->name('semestral_post');
+
 Route::get('/curso-anual', [PagesController::class, 'anual'])->name('anual');
 Route::get('/curso-semi-intensivo', [PagesController::class, 'semi'])->name('intensivo');
 
