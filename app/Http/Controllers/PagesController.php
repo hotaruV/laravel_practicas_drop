@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FormularioRequest;
 use App\Models\formulario_general;
 use App\Models\Universidades;
 use Illuminate\Http\Request;
@@ -28,9 +29,11 @@ class PagesController extends Controller
         return view('pages.semi', compact('universidades'));
     }
 
-    public function semestral_data(Request $request)
+    public function semestral_data(FormularioRequest $request)
     {
+        //return $request->input('form_edad');
 
+       //return $request;
         $nombre = $request->input('form_name');
         $edad = $request->input('form_edad');
         $whats = $request->input('form_num');
@@ -45,12 +48,25 @@ class PagesController extends Controller
         $csdt = $request->input('form_csdt');
         $nombre_padre = $request->input('form_name_padre');
         $cel_p = $request->input('form_tel_padre');
-        $registro = $request->input('register');
+        $registro = $request->input('form_check');
+
 
         formulario_general::create([
             'dp_nombre' => $nombre,
-            'dp_edad' => $edad
+            'dp_edad' => $edad,
+            'dp_whatsApp' => $whats,
+            'dp_email' => $email,
+            'dp_facebook' => $face,
+            'dp_domicilio' => $domicilio,
+            'data_carrera' => $carrera,
+            'data_escuela' => $procedencia,
+            'data_horario' => $horario,
+            'data_razonIngreso' => $pregunta,
+            'ref_saberNosotros' => $csdt,
+            'ref_nombreTutor' => $nombre_padre,
+            'ref_telefonoTutor' => $cel_p,
+            'curso_id' => $registro,
+            'universidad_id' =>  $universidad,
         ]);
-
     }
 }

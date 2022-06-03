@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('formulario_generals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('universidad_id')->nullable()->references('id')->on('universidades')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('dp_nombre');
+            $table->foreignId('universidad_id')->references('id')->on('universidades')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('dp_nombre', 100)->nullable();
             $table->string('dp_edad');
             $table->string('dp_whatsApp');
             $table->string('dp_email');
-            $table->string('dp_faceboo');
+            $table->string('dp_facebook');
             $table->string('dp_domicilio');
             $table->string('data_carrera');
             $table->string('data_escuela');
