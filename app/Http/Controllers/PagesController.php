@@ -31,42 +31,47 @@ class PagesController extends Controller
 
     public function semestral_data(FormularioRequest $request)
     {
-        //return $request->input('form_edad');
+
+    }
+
+
+    private function enviar_formulario(Request $request){
+         //return $request->input('form_edad');
 
        //return $request;
-        $nombre = $request->input('form_name');
-        $edad = $request->input('form_edad');
-        $whats = $request->input('form_num');
-        $email = $request->input('form_email');
-        $face = $request->input('form_face');
-        $domicilio = $request->input('form_dom');
-        $universidad = $request->input('form_uni');
-        $carrera = $request->input('form_carrera');
-        $procedencia = $request->input('form_escuela');
-        $horario = $request->input('form_horario');
-        $pregunta = $request->input('form_cuentanos');
-        $csdt = $request->input('form_csdt');
-        $nombre_padre = $request->input('form_name_padre');
-        $cel_p = $request->input('form_tel_padre');
-        $registro = $request->input('form_check');
+       $nombre = $request->input('form_name');
+       $edad = $request->input('form_edad');
+       $whats = $request->input('form_num');
+       $email = $request->input('form_email');
+       $face = $request->input('form_face');
+       $domicilio = $request->input('form_dom');
+       $universidad = $request->input('form_uni');
+       $carrera = $request->input('form_carrera');
+       $procedencia = $request->input('form_escuela');
+       $horario = $request->input('form_horario');
+       $pregunta = $request->input('form_cuentanos');
+       $csdt = $request->input('form_csdt');
+       $nombre_padre = $request->input('form_name_padre');
+       $cel_p = $request->input('form_tel_padre');
+       $registro = $request->input('form_check');
 
 
-        formulario_general::create([
-            'dp_nombre' => $nombre,
-            'dp_edad' => $edad,
-            'dp_whatsApp' => $whats,
-            'dp_email' => $email,
-            'dp_facebook' => $face,
-            'dp_domicilio' => $domicilio,
-            'data_carrera' => $carrera,
-            'data_escuela' => $procedencia,
-            'data_horario' => $horario,
-            'data_razonIngreso' => $pregunta,
-            'ref_saberNosotros' => $csdt,
-            'ref_nombreTutor' => $nombre_padre,
-            'ref_telefonoTutor' => $cel_p,
-            'curso_id' => $registro,
-            'universidad_id' =>  $universidad,
-        ]);
+       formulario_general::create([
+           'dp_nombre' => $nombre,
+           'dp_edad' => $edad,
+           'dp_whatsApp' => $whats,
+           'dp_email' => $email,
+           'dp_facebook' => $face,
+           'dp_domicilio' => $domicilio,
+           'data_carrera' => $carrera,
+           'data_escuela' => $procedencia,
+           'data_horario' => $horario,
+           'data_razonIngreso' => $pregunta,
+           'ref_saberNosotros' => $csdt,
+           'ref_nombreTutor' => $nombre_padre,
+           'ref_telefonoTutor' => $cel_p,
+           'curso_id' => $registro,
+           'universidad_id' =>  $universidad,
+       ]);
     }
 }

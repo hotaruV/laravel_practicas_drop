@@ -25,9 +25,9 @@ class FormularioRequest extends FormRequest
     {
         return [
             "form_name" => 'required',
-            "form_edad" => 'required',
-            "form_num" => 'required',
-            "form_email" => 'required',
+            "form_edad" => 'required|integer',
+            "form_num" => 'required|integer',
+            "form_email" => 'required|email',
             "form_face" => 'required',
             "form_dom" => 'required',
             "form_uni" => 'required',
