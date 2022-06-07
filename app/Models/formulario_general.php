@@ -27,4 +27,11 @@ class formulario_general extends Model
         'universidad_id'
 
     ];
+
+    public function universidades(){
+        return $this->hasMany(universidades::class);
+    }
+    public function cursos(){
+        return $this->hasMany(cursos::class);
+    }
 }

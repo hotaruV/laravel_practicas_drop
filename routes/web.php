@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormularioGeneralController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,8 @@ Route::post('/curso-semestral', [PagesController::class, 'semestral_data'])->nam
 
 Route::get('/curso-anual', [PagesController::class, 'anual'])->name('anual');
 Route::get('/curso-semi-intensivo', [PagesController::class, 'semi'])->name('intensivo');
+
+Route::get('/formulario', [FormularioGeneralController::class, 'index'])->name('form-index');
 
 // Route::get('/productos-servicios', [ProductoController::class, 'saludo']);
 
