@@ -4,10 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Universidades;
+use App\Models\cursos;
 
 class formulario_general extends Model
 {
     use HasFactory;
+
 
     protected $fillable = [
         'dp_nombre',
@@ -28,10 +31,10 @@ class formulario_general extends Model
 
     ];
 
-    public function universidades(){
-        return $this->hasMany(universidades::class);
+    public function universidad(){
+        return $this->belongsTo(universidades::class, 'id');
     }
-    public function cursos(){
-        return $this->hasMany(cursos::class);
+    public function curso(){
+        return $this->belongsTo(cursos::class, 'id');
     }
 }
