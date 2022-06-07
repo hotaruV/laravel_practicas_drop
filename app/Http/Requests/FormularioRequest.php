@@ -40,4 +40,22 @@ class FormularioRequest extends FormRequest
             "form_tel_padre" => 'required'
         ];
     }
+    public function messages(){
+        return [
+            "form_name.required" => "El campo Nombre es requerido",
+            "form_edad.required" => "El campo Edad es requerido",
+            "form_num.required" => "El campo WhatsApp es requerido",
+            "form_email.email" => "El campo Email es requerido",
+            "form_face.required" => "El campo Facebook es requerido",
+            "form_dom.required" => "El campo Domicilio es requerido",
+            "form_uni.required" => "El campo Universidad es requerido",
+            "form_carrera.required" => "El campo A que carrera desea ingresar es requerido",
+            "form_escuela.required" => "El campo Escuela de procedencia es requerido",
+            "form_horario.required" => "El campo Horario es requerido",
+            "form_cuentanos.required" => "El campo Como supiste... es requerido",
+            "form_csdt.required" => "El campo Cuentanos... es requerido",
+            "form_name_padre.required" => "El campo Nombre del padre/tutor es requerido",
+            "form_tel_padre.required" => "El campo Telefono del padre/tutor es requerido"
+        ];
+    }
 }

@@ -27,4 +27,10 @@ class formulario_general extends Model
         'universidad_id'
 
     ];
+    public function universidad(){
+        return $this-> belongsTo(Universidades::class);
+    }
+    public function curso(){
+        return $this-> belongsTo(cursos::class);
+    }
 }
