@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\formulario_general;
+use App\Models\Universidades;
 use Illuminate\Http\Request;
 
 class FormularioGeneralController extends Controller
@@ -58,7 +59,9 @@ class FormularioGeneralController extends Controller
      */
     public function edit($id)
     {
-        //
+        $form = formulario_general::findOrfail($id);
+        $universidades = Universidades::all();
+        return view('pages.form.edit', compact('universidades', 'form'));
     }
 
     /**

@@ -3,7 +3,7 @@
 @section('contenido')
 
 <div class="container data">
-<table class="table table-striped mb-4 ">
+<table class="table table-striped mb-4 mt-4 ">
     <thead>
       <tr>
         <th scope="col">Id</th>
@@ -24,7 +24,7 @@
         <td>{{ $incripcion->dp_email}}</td>
         <td>{{ $incripcion->curso->nombre}}</td>
         <td>{{ $incripcion->universidad->nombre}}</td>
-        <td> <div class="btn-danger btn btn-sm">Eliminar</div>  <div class="btn btn-success btn-sm" >Modificar</div></td>
+        <td><a href="{{ route('formu.edit', $incripcion) }}" class="btn btn-warning btn-sm" >Modificar</a> <a class="btn-danger btn btn-sm">Eliminar</a>  </td>
     </tr>
     @endforeach
     </tbody>
