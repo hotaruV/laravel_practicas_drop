@@ -33,4 +33,7 @@ class formulario_general extends Model
     public function curso(){
         return $this-> belongsTo(cursos::class);
     }
+    public function universidades(){
+        return $this->belongsToMany(Universidades::class,'formulario_generals' ,'id', 'universidad_id');
+    }
 }

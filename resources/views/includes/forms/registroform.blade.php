@@ -44,9 +44,9 @@
                 (in_array($id, old('universidad')) ?
                 'selected' : '')
                 : (isset($form) ?
-                ($form->universidad->firstWhere('id', $id) ?
+                ($form->universidades->firstWhere('id', $id) ?
                  'selected' : '') : '') }}>
-                {{ $universidad->nombre }}
+                {{ $universidad }}
             </option>
                 @endforeach
             </select>

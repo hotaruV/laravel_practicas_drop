@@ -60,7 +60,7 @@ class FormularioGeneralController extends Controller
     public function edit($id)
     {
         $form = formulario_general::findOrfail($id);
-        $universidades = Universidades::all();
+        $universidades = Universidades::pluck('nombre', 'id')->toArray();
         return view('pages.form.edit', compact('universidades', 'form'));
     }
 
