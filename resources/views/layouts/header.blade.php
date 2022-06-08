@@ -49,7 +49,7 @@
     </div>
 </header>
 
-<section class="ficha">
+{{-- <section class="ficha">
     <h2 class="ficha__titulo">Ficha de Inscripción</h2>
     <div class="ficha__textos">
         <p class="ficha__texto">Hola Pensador, estás a un paso de pertenecer a la comunidad de pensadores número 1; en
@@ -60,7 +60,7 @@
             por favor desactiva esta función o extensión temporalmente para enviar tu ficha sin problemas.</p>
     </div>
     <p class="ficha__bienvenida negritas">Bienvenido al inicio de tu éxito profesional, bienvenido a Thinkers!!</p>
-</section>
+</section> --}}
 
 
 

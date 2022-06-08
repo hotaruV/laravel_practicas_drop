@@ -15,7 +15,7 @@ class FormularioGeneralController extends Controller
     public function index()
     {
         $inscripciones = formulario_general::all(); //asi tomamos los datos de la tabla formulario general
-        return view('pages.formsemestral', compact('inscripciones'));
+        return view('pages.form.index', compact('inscripciones'));
     }
 
     /**

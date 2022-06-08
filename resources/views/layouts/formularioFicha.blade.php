@@ -24,7 +24,6 @@
 <body>
 
     @include('layouts.header')
-
     @yield('contenido')
 
     @include('layouts.informacion')

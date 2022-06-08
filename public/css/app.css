@@ -573,7 +573,9 @@ li{
     }
 }
 
-
-
-
+/* tabla */
+.data{
+    max-height: 100vh;
+    height: 100vh;
+}
 

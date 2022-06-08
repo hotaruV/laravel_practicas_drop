@@ -29,7 +29,7 @@ Route::get('/curso-semi-intensivo', [PagesController::class, 'semi'])->name('int
 Route::post('/curso-semi-intensivo', [PagesController::class, 'semi-intensivo_data'])->name('semi-intensivo_post');
 
 Route::get('/formulario', [FormularioGeneralController::class, 'index'])->name('form-index');
-// Route::get('/productos-servicios', [ProductoController::class, 'saludo']);
+Route::resource('/formulario,',FormularioGeneralController::class)->names('formu');
 
 
 Route::middleware([

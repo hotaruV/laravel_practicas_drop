@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
-
 @section('contenido')
+@include('layouts.formuFicha')
     <section class="form">
         <div class="alerta_validacion">
             @if ($errors->any())
@@ -19,8 +19,6 @@
         </form>
     </section>
 @endsection
-
-
 
 @section('scripts')
     <script src="https://kit.fontawesome.com/f3cd46a135.js" crossorigin="anonymous"></script>
