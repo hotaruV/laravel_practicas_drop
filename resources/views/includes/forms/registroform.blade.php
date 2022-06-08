@@ -40,7 +40,12 @@
                 <option value=null>---Selecciona---</option>
                 @foreach ($universidades as $id => $universidad )
                 <option value="{{ $id }}"
-                {{ is_array(old('universidad')) ? (in_array($id, old('universidad')) ? 'selected' : '') : (isset($form) ? ($form->universidad->firstWhere('id', $id) ? 'selected' : '') : '') }}>
+                {{ is_array(old('universidad')) ?
+                (in_array($id, old('universidad')) ?
+                'selected' : '')
+                : (isset($form) ?
+                ($form->universidad->firstWhere('id', $id) ?
+                 'selected' : '') : '') }}>
                 {{ $universidad->nombre }}
             </option>
                 @endforeach
